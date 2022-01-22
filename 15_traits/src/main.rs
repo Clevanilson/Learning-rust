@@ -38,12 +38,23 @@ pub fn greet(arg: &impl Greet) {
     arg.greet();
 }
 
-// or 
+
 /*
-pub fn greet<T: Greet>(arg: &T) {
-    arg.greet();
-}
+Using Trait bound.
+    pub fn greet<T: Greet + Display>(arg: &T) {
+        ...
+    }
+
+    Using trait bound using where clause.
+    pub fn greet<T, U>() 
+        where T: Greet + Display,
+              U: Greet + Debug
+    {
+        ...
+    }
 */
+
+
 
 
 
